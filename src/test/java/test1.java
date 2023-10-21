@@ -11,6 +11,7 @@ import java.time.Duration;
 public class test1 {
     public static void main(String[] args) {
 
+
         //Khởi tạo browser với Chrome
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
