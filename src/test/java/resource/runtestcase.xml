@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
     <test name="Sample">
         <classes>
-            <class name="TestNG.RunTestNG"/>
+            <class name="TestNG.LogInTest"/>
         </classes>
     </test>
 </suite>

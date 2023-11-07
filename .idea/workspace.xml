@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7dfe7a8-e753-4215-bba3-8a66616c9ae5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestNG/RunTestNG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/RunTestNG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/LogInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunTestNG" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LogInTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTest" />
       <extension name="coverage">
         <pattern>
@@ -73,7 +71,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.RunTestNG" />
+      <option name="MAIN_CLASS_NAME" value="TestNG.LogInTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -84,7 +82,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml" />
-        <item itemvalue="TestNG.RunTestNG" />
+        <item itemvalue="TestNG.LogInTest" />
         <item itemvalue="Application.test1" />
       </list>
     </recent_temporary>
