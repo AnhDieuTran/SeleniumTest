@@ -1,19 +1,20 @@
 package TestNG;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 
-
 public class LogInTest {
+
     private WebDriver driver;
+
 
     @BeforeTest
     public void init() {
@@ -22,7 +23,7 @@ public class LogInTest {
         driver.get("https://foodstorehq.000webhostapp.com/food_store_web/build/index.html");
     }
 
-    // Test kiểm tra thông báo xem khi không nhập gì.
+    //Test kiểm tra thông báo xem khi không nhập gì.
     @Test
     public void NoInfo1() {
         String expectedErrorMessage = "Bạn chưa nhập tên đăng nhập và mật khẩu.";
@@ -45,7 +46,6 @@ public class LogInTest {
             System.out.println("Không tìm thấy hình ảnh.");
         }
     }
-
     @Test
     public void NoInfo2() {
 
