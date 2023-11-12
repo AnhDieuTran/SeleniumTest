@@ -10,6 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 
+import Method.ChangePWMethod;
 
 public class TestChangePW {
     WebDriver driver;
@@ -18,10 +19,25 @@ public class TestChangePW {
     private String newpassword = "1234";
     private String newpassword2 = "abcdef";
 
-    public WebElement changeButton;
-    public WebElement matkhaucu;
-    public WebElement matkhaumoi_1;
-    public WebElement matkhaumoi_2;
+    private WebElement changeButton;
+    private WebElement matkhaucu;
+    private WebElement matkhaumoi_1;
+    private WebElement matkhaumoi_2;
+    
+    private WebElement noti;
+    
+    ChangePWMethod pwMethod = new ChangePWMethod();
+
+    // Khởi tạo các element trong form.
+    private void formElement() {
+        driver.navigate().refresh();
+        changeButton = driver.findElement(By.name("btndoimatkhau"));
+        matkhaucu = driver.findElement(By.id("matkhaucu"));
+        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
+        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        pwMethod.setForm(matkhaucu, matkhaumoi_1, matkhaumoi_2, changeButton);
+    }
+
 
     @BeforeTest
     public void setUp() {
@@ -45,87 +61,40 @@ public class TestChangePW {
 
     @Test
     public void EmptyInput() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
-
-        matkhaucu.sendKeys("");
-
-        changeButton.click();
-
-        String matkhaucuError = matkhaucu.getAttribute("validationMessage");
-
-        // Kiểm tra xem thông báo lỗi có hiển thị đúng không
-
-        Assert.assertTrue(matkhaucuError.contains("Please fill out this field"));
+        formElement();
+        pwMethod.sendForm("", "", "");
+        pwMethod.assertMessage(matkhaucu, true);
     }
 
     @Test
     public void EmptyPassword() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
+        
+        pwMethod.sendForm(password, "", "");
 
-        matkhaucu.sendKeys(password);
-        matkhaumoi_1.sendKeys("");
-
-        changeButton.click();
-
-        String matkhaucuError = matkhaucu.getAttribute("validationMessage");
-        String matkhaumoi_1Error = matkhaumoi_1.getAttribute("validationMessage");
-
-
-        // Kiểm tra xem thông báo lỗi có hiển thị đúng không
-
-        Assert.assertFalse(matkhaucuError.contains("Please fill out this field"));
-        Assert.assertTrue(matkhaumoi_1Error.contains("Please fill out this field"));
-
+        pwMethod.assertMessage(matkhaucu, false);
+        pwMethod.assertMessage(matkhaumoi_1, true);
     }
 
     @Test
     public void EmptyRePassword() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
+        
+        pwMethod.sendForm(password, newpassword, "");
 
-        matkhaucu.sendKeys(password);
-        matkhaumoi_1.sendKeys(newpassword);
-        matkhaumoi_2.sendKeys("");
-
-        changeButton.click();
-
-        String matkhaucuError = matkhaucu.getAttribute("validationMessage");
-        String matkhaumoi_1Error = matkhaumoi_1.getAttribute("validationMessage");
-        String matkhaumoi_2Error = matkhaumoi_2.getAttribute("validationMessage");
-
-        // Kiểm tra xem thông báo lỗi có hiển thị đúng không
-
-        Assert.assertFalse(matkhaucuError.contains("Please fill out this field"));
-        Assert.assertFalse(matkhaumoi_1Error.contains("Please fill out this field"));
-        Assert.assertTrue(matkhaumoi_2Error.contains("Please fill out this field"));
+        pwMethod.assertMessage(matkhaucu, false);
+        pwMethod.assertMessage(matkhaumoi_1, false);
+        pwMethod.assertMessage(matkhaumoi_2, true);
     }
+
+    // Mật khẩu cũ không đúng
     @Test
     public void WrongPassword() {
-    // Mật khẩu cũ không đúng
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
 
-        matkhaucu.sendKeys("password");
-        matkhaumoi_1.sendKeys("newpassword");
-        matkhaumoi_2.sendKeys("newpassword");
+        pwMethod.sendForm("password", "newpassword", "newpassword");
 
-        changeButton.click();
-
-        WebElement noti = driver.findElement(By.id("noti"));
+        noti = driver.findElement(By.id("noti"));
         String expected_noti = "Mật khẩu cũ không đúng!";
         String actual_noti = noti.getText();
 
@@ -134,19 +103,11 @@ public class TestChangePW {
 
     @Test
     public void WrongNewPassword() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
 
-        matkhaucu.sendKeys(password);
-        matkhaumoi_1.sendKeys(newpassword);
-        matkhaumoi_2.sendKeys("newpassword");
+        pwMethod.sendForm(password, newpassword, "newpassword");
 
-        changeButton.click();
-
-        WebElement noti = driver.findElement(By.id("noti"));
+        noti = driver.findElement(By.id("noti"));
         String expected_noti = "Mật khẩu mới không khớp. Vui lòng nhập lại!";
         String actual_noti = noti.getText();
 
@@ -155,49 +116,31 @@ public class TestChangePW {
 
     @Test
     public void WrongOldAndNew() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
 
-        matkhaucu.sendKeys("password");
-        matkhaumoi_1.sendKeys(newpassword);
-        matkhaumoi_2.sendKeys(newpassword2);
+        pwMethod.sendForm("password", newpassword, newpassword2);
 
-        changeButton.click();
-
-        WebElement noti = driver.findElement(By.id("noti"));
+        noti = driver.findElement(By.id("noti"));
         String expected_noti = "Mật khẩu cũ không đúng!\nMật khẩu mới không khớp. Vui lòng nhập lại!";
         String actual_noti = noti.getText();
 
         org.testng.Assert.assertEquals(actual_noti, expected_noti, "Khong thanh cong!");
     }
+
     @Test
     public void Successful() {
-        driver.navigate().refresh();
-        changeButton = driver.findElement(By.name("btndoimatkhau"));
-        matkhaucu = driver.findElement(By.id("matkhaucu"));
-        matkhaumoi_1 = driver.findElement(By.id("matkhaumoi_1"));
-        matkhaumoi_2 = driver.findElement(By.id("matkhaumoi_2"));
+        formElement();
 
-        matkhaucu.sendKeys(password);
-        matkhaumoi_1.sendKeys(newpassword);
-        matkhaumoi_2.sendKeys(newpassword);
+        pwMethod.sendForm(password, newpassword, newpassword);
 
-        changeButton.click();
-
-        WebElement noti = driver.findElement(By.id("noti"));
+        noti = driver.findElement(By.id("noti"));
         String expected_noti = "Cập nhật mật khẩu thành công!";
         String actual_noti = noti.getText();
 
         org.testng.Assert.assertEquals(actual_noti, expected_noti, "Khong thanh cong!");
     }
 
-
-
     @AfterTest
-
     public void quit() {
         driver.quit();
     }

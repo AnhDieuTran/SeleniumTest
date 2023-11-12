@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7dfe7a8-e753-4215-bba3-8a66616c9ae5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Method/ChangePWMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Method/LogInMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Method/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Method/OrderMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/LogInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/LogInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/LogInTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +45,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Documents/GitHub/HRM_App&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Documents/SeleniumTest&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -47,13 +53,6 @@
   }
 }</component>
   <component name="RunManager" selected="TestNG.C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml">
-    <configuration name="test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test1" />
-      <module name="SeleniumTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTest" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" />
@@ -64,7 +63,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogInTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestChangePW" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTest" />
       <extension name="coverage">
         <pattern>
@@ -73,8 +72,60 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.LogInTest" />
+      <option name="MAIN_CLASS_NAME" value="TestNG.TestChangePW" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestNG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestNG" />
+      <option name="MAIN_CLASS_NAME" value="TestNG.TestLogin" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrder" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestNG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestNG" />
+      <option name="MAIN_CLASS_NAME" value="TestNG.TestOrder" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrder.AddOutOfStockProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestNG.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestNG" />
+      <option name="MAIN_CLASS_NAME" value="TestNG.TestOrder" />
+      <option name="METHOD_NAME" value="AddOutOfStockProduct" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -84,8 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml" />
-        <item itemvalue="TestNG.LogInTest" />
-        <item itemvalue="Application.test1" />
+        <item itemvalue="TestNG.TestLogin" />
+        <item itemvalue="TestNG.TestChangePW" />
+        <item itemvalue="TestNG.TestOrder" />
+        <item itemvalue="TestNG.TestOrder.AddOutOfStockProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -110,5 +163,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/runtestcase_xml$OrderTest.ic" NAME="OrderTest Coverage Results" MODIFIED="1699717194870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>TestNG.*</FILTER>
+    </SUITE>
   </component>
 </project>
