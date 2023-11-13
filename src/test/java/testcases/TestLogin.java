@@ -1,23 +1,24 @@
-package TestNG;
+package testcases;
 
-import Method.LogInMethod;
+import base.Method;
+import helpers.ExcelHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+import pages.LogInMethod;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 
-public class TestLogin {
-    WebDriver driver;
+public class TestLogin extends Method {
+    private static final int numOfTest = 7;
+    private static final int numOfInput = 3;
+    private String[][] test = new String[numOfTest][numOfInput];
     private WebElement loginButton;
     private WebElement InputUsername;
     private WebElement InputPassWord;
     private WebElement errorElement;
-    
+
     LogInMethod logMethod = new LogInMethod();
     
     private void setElement() {
@@ -31,87 +32,89 @@ public class TestLogin {
         errorElement = driver.findElement(By.id("error_message"));
     }
 
-    @BeforeTest
+
+
+    @BeforeClass
     public void init() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        if (driver == null) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+        }
         driver.get("https://foodstorehq.000webhostapp.com/management_web/account/");
         driver.manage().window().maximize();
+        test = initExcel(numOfTest, numOfInput, "Sheet1");
     }
     @Test
     public void testEmptyInput() {
         setElement();
-
         loginButton.click();
-        logMethod.waitTime(2000);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Bạn chưa nhập tên đăng nhập và mật khẩu.");
+        Assert.assertEquals(errorElement.getText(), test[0][2]);
     }
 
     @Test
     public void testEmptyUser() {
         setElement();
 
-        logMethod.sendForm("", "123");
+        logMethod.sendForm(test[1][0], test[1][1]);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Bạn chưa nhập tên đăng nhập.");
+        Assert.assertEquals(errorElement.getText(), test[1][2]);
     }
 
     @Test
     public void testEmptyPassWord() {
         setElement();
 
-        logMethod.sendForm("admin", "");
+        logMethod.sendForm(test[2][0], test[2][1]);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Bạn chưa nhập mật khẩu.");
+        Assert.assertEquals(errorElement.getText(), test[2][2]);
     }
 
     @Test
     public void testInvalidUser() {
         setElement();
 
-        logMethod.sendForm("ad", "123");
+        logMethod.sendForm(test[3][0], test[3][1]);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Tài khoản hoặc mật khẩu không hợp lệ!");
+        Assert.assertEquals(errorElement.getText(), test[3][2]);
     }
 
     @Test
     public void testInvalidPassWord() {
         setElement();
 
-        logMethod.sendForm("admin", "a123");
+        logMethod.sendForm(test[4][0], test[4][1]);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Tài khoản hoặc mật khẩu không hợp lệ!");
+        Assert.assertEquals(errorElement.getText(), test[4][2]);
     }
 
     @Test
     public void testInvalidUserAndPassWord() {
         setElement();
 
-        logMethod.sendForm("admin12", "a123");
+        logMethod.sendForm(test[5][0], test[5][1]);
 
         setError();
-        Assert.assertEquals(errorElement.getText(), "Tài khoản hoặc mật khẩu không hợp lệ!");
+        Assert.assertEquals(errorElement.getText(), test[5][2]);
     }
 
     @Test
     public void testValidUserAndPassWord() {
         setElement();
 
-        logMethod.sendForm("admin", "1234");
+        logMethod.sendForm(test[6][0], test[6][1]);
 
         WebElement title = driver.findElement(By.xpath("//h1[contains(text(), 'BẢNG THỐNG KÊ')]"));
-        Assert.assertTrue(title.isDisplayed(), "Đăng nhập thành công");
+        Assert.assertTrue(title.isDisplayed(), test[6][2]);
     }
 
-    @AfterTest
+    @AfterClass
     public void quit() {
-
         driver.quit();
     }
 }

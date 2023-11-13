@@ -1,8 +1,8 @@
-package Method;
+package pages;
 
 import org.openqa.selenium.WebElement;
 
-public class LogInMethod extends Method {
+public class LogInMethod {
     private WebElement loginButton;
     private WebElement InputUsername;
     private WebElement InputPassWord;
@@ -19,9 +19,9 @@ public class LogInMethod extends Method {
 
         InputUsername.sendKeys(inputInputUsername);
         InputPassWord.sendKeys(inputInputPassWord);
-        waitTime(1000);
+        //waitTime(1000);
 
         loginButton.click();
-        waitTime(2000);
+        //waitTime(2000);
     }
 }

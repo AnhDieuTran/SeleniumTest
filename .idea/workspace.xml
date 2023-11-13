@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7dfe7a8-e753-4215-bba3-8a66616c9ae5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Method/ChangePWMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Method/LogInMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Method/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Method/OrderMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/ExcelHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/LogInTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Method/ChangePWMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Method/LogInMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Method/OrderMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestChangePW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +48,30 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Documents/SeleniumTest&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="base" />
+    </key>
+  </component>
   <component name="RunManager" selected="TestNG.C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml">
+    <configuration name="TestLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testcases.TestLogin" />
+      <module name="SeleniumTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTest" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" />
@@ -67,12 +86,12 @@
       <module name="SeleniumTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestNG.*" />
+          <option name="PATTERN" value="testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.TestChangePW" />
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.TestChangePW" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -84,12 +103,12 @@
       <module name="SeleniumTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestNG.*" />
+          <option name="PATTERN" value="testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.TestLogin" />
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.TestLogin" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -101,31 +120,13 @@
       <module name="SeleniumTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestNG.*" />
+          <option name="PATTERN" value="testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.TestOrder" />
+      <option name="PACKAGE_NAME" value="testcases" />
+      <option name="MAIN_CLASS_NAME" value="testcases.TestOrder" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrder.AddOutOfStockProduct" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestNG.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestNG" />
-      <option name="MAIN_CLASS_NAME" value="TestNG.TestOrder" />
-      <option name="METHOD_NAME" value="AddOutOfStockProduct" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -135,10 +136,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/PC/Documents/SeleniumTest/src/test/java/resource/runtestcase.xml" />
-        <item itemvalue="TestNG.TestLogin" />
-        <item itemvalue="TestNG.TestChangePW" />
         <item itemvalue="TestNG.TestOrder" />
-        <item itemvalue="TestNG.TestOrder.AddOutOfStockProduct" />
+        <item itemvalue="TestNG.TestChangePW" />
+        <item itemvalue="TestNG.TestLogin" />
+        <item itemvalue="Application.TestLogin" />
       </list>
     </recent_temporary>
   </component>

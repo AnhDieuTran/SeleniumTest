@@ -1,8 +1,8 @@
-package Method;
+package pages;
 
 import org.openqa.selenium.WebElement;
 
-public class ChangePWMethod extends Method {
+public class ChangePWMethod {
 
     private WebElement changeButton;
     private WebElement matkhaucu;
@@ -25,10 +25,10 @@ public class ChangePWMethod extends Method {
         matkhaucu.sendKeys(inputmatkhaucu);
         matkhaumoi_1.sendKeys(inputmatkhaumoi_1);
         matkhaumoi_2.sendKeys(inputmatkhaumoi_2);
-        waitTime(1000);
+        //waitTime(1000);
 
         changeButton.click();
-        waitTime(2000);
+        //waitTime(2000);
     }
 
 }
