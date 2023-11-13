@@ -1,6 +1,7 @@
 package testcases;
 
 import base.Method;
+import helpers.CaptureHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,9 +26,10 @@ public class TestChangePW extends Method {
     private WebElement noti;
     
     ChangePWMethod pwMethod = new ChangePWMethod();
+    CaptureHelper capChangePW = new CaptureHelper();
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws Exception {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -35,6 +37,7 @@ public class TestChangePW extends Method {
         driver.get("https://foodstorehq.000webhostapp.com/management_web/account/");
         driver.manage().window().maximize();
         test = initExcel(numOfTest, numOfInput, "Sheet2");
+        capChangePW.startRecordATU("ChangPW");
 
         WebElement usernameField = driver.findElement(By.name("username"));
         WebElement passwordField = driver.findElement(By.name("password"));
@@ -47,6 +50,8 @@ public class TestChangePW extends Method {
         // Click nút đăng nhập
         loginButton.click();
         driver.get("https://foodstorehq.000webhostapp.com/management_web/manage/password/");
+
+
     }
 
     @Test
@@ -127,7 +132,8 @@ public class TestChangePW extends Method {
     }
 
     @AfterClass
-    public void quit() {
+    public void quit() throws Exception{
+        capChangePW.stopRecordATU();
         driver.quit();
     }
 

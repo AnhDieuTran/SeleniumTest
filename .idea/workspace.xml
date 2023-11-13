@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7dfe7a8-e753-4215-bba3-8a66616c9ae5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/ExcelHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/CaptureHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Method/ChangePWMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Method/LogInMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Method.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Method/OrderMethod.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestChangePW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestChangePW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/TestChangePW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestChangePW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestOrder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +37,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Documents/SeleniumTest&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/PC/Documents/SeleniumTest",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="base" />
@@ -164,6 +160,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog>
+          <selected-grouping-rules>
+            <grouping-rule id="XBreakpointGroupingByClassRule" />
+            <grouping-rule id="XBreakpointGroupingByPackageRule" />
+            <grouping-rule id="by-file" />
+          </selected-grouping-rules>
+        </breakpoints-dialog>
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/runtestcase_xml$OrderTest.ic" NAME="OrderTest Coverage Results" MODIFIED="1699717194870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -1,6 +1,7 @@
 package testcases;
 
 import base.Method;
+import helpers.CaptureHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,7 @@ public class TestOrder extends Method {
     private WebElement productPage;
     private WebElement addToCartButton;
     WebElement message;
-    
+    private CaptureHelper capOrder = new CaptureHelper();
     private void setProductPage() {
         productPage = driver.findElement(By.xpath("//a[contains(text(), 'Sản phẩm')]"));
         orderMethod.clickWithJS(productPage);
@@ -34,7 +35,7 @@ public class TestOrder extends Method {
     }
 
     @BeforeClass
-    public void init() {
+    public void init() throws Exception{
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -43,6 +44,7 @@ public class TestOrder extends Method {
         orderMethod = new OrderMethod(driver);
         driver.manage().window().maximize();
         test = initExcel(numOfTest, numOfInput, "Sheet3");
+        capOrder.startRecordATU("Order");
     }
 
     //Kiểm tra khi không có gì trong giỏ hàng
@@ -201,7 +203,8 @@ public class TestOrder extends Method {
     }
 
     @AfterClass
-    public void quit() {
+    public void quit() throws Exception{
+        capOrder.stopRecordATU();
         driver.quit();
     }
 }

@@ -1,6 +1,7 @@
 package testcases;
 
 import base.Method;
+import helpers.CaptureHelper;
 import helpers.ExcelHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +21,7 @@ public class TestLogin extends Method {
     private WebElement errorElement;
 
     LogInMethod logMethod = new LogInMethod();
+    CaptureHelper capLogin = new CaptureHelper();
     
     private void setElement() {
         loginButton = driver.findElement(By.name("dangnhap"));
@@ -35,7 +37,7 @@ public class TestLogin extends Method {
 
 
     @BeforeClass
-    public void init() {
+    public void init() throws Exception {
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -43,6 +45,7 @@ public class TestLogin extends Method {
         driver.get("https://foodstorehq.000webhostapp.com/management_web/account/");
         driver.manage().window().maximize();
         test = initExcel(numOfTest, numOfInput, "Sheet1");
+        capLogin.startRecordATU("Login");
     }
     @Test
     public void testEmptyInput() {
@@ -114,7 +117,8 @@ public class TestLogin extends Method {
     }
 
     @AfterClass
-    public void quit() {
+    public void quit() throws Exception{
+        capLogin.stopRecordATU();
         driver.quit();
     }
 }

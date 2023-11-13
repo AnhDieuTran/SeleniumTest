@@ -1,5 +1,6 @@
 package base;
 
+import helpers.CaptureHelper;
 import helpers.ExcelHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -50,10 +51,8 @@ public class Method {
 
     @AfterClass
     public void tearDown() throws Exception {
-        Thread.sleep(1000);
         driver.quit();
     }
-
 
     // Hàm chờ
     public void waitTime(long time) {
