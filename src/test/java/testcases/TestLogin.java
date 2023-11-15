@@ -2,9 +2,10 @@ package testcases;
 
 import base.Method;
 import helpers.CaptureHelper;
-import helpers.ExcelHelper;
+import helpers.ScreenShotHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.LogInMethod;
 import org.openqa.selenium.By;
@@ -114,6 +115,11 @@ public class TestLogin extends Method {
 
         WebElement title = driver.findElement(By.xpath("//h1[contains(text(), 'BẢNG THỐNG KÊ')]"));
         Assert.assertTrue(title.isDisplayed(), test[6][2]);
+    }
+
+    @AfterMethod
+    public void screenshot(ITestResult result) {
+        ScreenShotHelper.captureScreenshot(result.getName(), driver);
     }
 
     @AfterClass

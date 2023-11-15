@@ -2,10 +2,12 @@ package testcases;
 
 import base.Method;
 import helpers.CaptureHelper;
+import helpers.ScreenShotHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import pages.ChangePWMethod;
@@ -129,6 +131,11 @@ public class TestChangePW extends Method {
         String actual_noti = noti.getText();
 
         org.testng.Assert.assertEquals(actual_noti, test[6][3], "Khong thanh cong!");
+    }
+
+    @AfterMethod
+    public void screenshot(ITestResult result) {
+        ScreenShotHelper.captureScreenshot(result.getName(), driver);
     }
 
     @AfterClass

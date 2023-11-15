@@ -17,5 +17,13 @@
 <!--            <class name="testcases.TestChangePW"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+<!--    <test name="TestOnEdge">-->
+<!--        <parameter name="browserType" value="edge" />-->
+<!--        <classes >-->
+<!--            <class name="testcases.TestOrder"/>-->
+<!--            <class name="testcases.TestLogin"/>-->
+<!--            <class name="testcases.TestChangePW"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
 

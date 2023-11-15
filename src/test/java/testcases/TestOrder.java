@@ -2,12 +2,14 @@ package testcases;
 
 import base.Method;
 import helpers.CaptureHelper;
+import helpers.ScreenShotHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.time.Duration;
 
@@ -200,6 +202,11 @@ public class TestOrder extends Method {
 
         message = driver.findElement(By.xpath("//h4[contains(text(), 'CHÚC MỪNG BẠN ĐÃ ĐẶT HÀNG THÀNH CÔNG')]"));
         checkMess(message, test[8][8], "Lỗi đặt hàng chưa thành công!");
+    }
+
+    @AfterMethod
+    public void screenshot(ITestResult result) {
+        ScreenShotHelper.captureScreenshot(result.getName(), driver);
     }
 
     @AfterClass
