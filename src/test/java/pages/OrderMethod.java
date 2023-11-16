@@ -71,7 +71,6 @@ public class OrderMethod {
         phone.sendKeys(inputPhone);
         address.sendKeys(inputAddress);
         note.sendKeys(inputNote);
-        //waitTime(2000);
     }
 
     // Hàm thêm sản phẩm.

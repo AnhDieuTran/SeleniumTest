@@ -25,10 +25,8 @@ public class ChangePWMethod {
         matkhaucu.sendKeys(inputmatkhaucu);
         matkhaumoi_1.sendKeys(inputmatkhaumoi_1);
         matkhaumoi_2.sendKeys(inputmatkhaumoi_2);
-        //waitTime(1000);
 
         changeButton.click();
-        //waitTime(2000);
     }
 
 }

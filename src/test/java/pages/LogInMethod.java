@@ -19,9 +19,7 @@ public class LogInMethod {
 
         InputUsername.sendKeys(inputInputUsername);
         InputPassWord.sendKeys(inputInputPassWord);
-        //waitTime(1000);
 
         loginButton.click();
-        //waitTime(2000);
     }
 }

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7dfe7a8-e753-4215-bba3-8a66616c9ae5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/testData.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testData.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/ExcelHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/ExcelHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ChangePWMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ChangePWMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LogInMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LogInMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/OrderMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OrderMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resource/runtestcase.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testcases/TestLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
