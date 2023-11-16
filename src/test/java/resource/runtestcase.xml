@@ -9,21 +9,23 @@
         </classes>
     </test>
 
-<!--    <test name="TestOnFireFox">-->
-<!--        <parameter name="browserType" value="firefox" />-->
-<!--        <classes >-->
-<!--            <class name="testcases.TestOrder"/>-->
-<!--            <class name="testcases.TestLogin"/>-->
-<!--            <class name="testcases.TestChangePW"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="TestOnFireFox">
+        <parameter name="browserType" value="firefox" />
+        <classes >
+            <class name="testcases.TestOrder"/>
+            <class name="testcases.TestLogin"/>
+            <class name="testcases.TestChangePW"/>
+        </classes>
+    </test>
+
 <!--    <test name="TestOnEdge">-->
 <!--        <parameter name="browserType" value="edge" />-->
-<!--        <classes >-->
+<!--        <classes>-->
 <!--            <class name="testcases.TestOrder"/>-->
 <!--            <class name="testcases.TestLogin"/>-->
 <!--            <class name="testcases.TestChangePW"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+
 </suite>
 

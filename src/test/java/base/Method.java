@@ -1,6 +1,5 @@
 package base;
 
-import helpers.CaptureHelper;
 import helpers.ExcelHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -114,7 +114,7 @@ public class TestLogin extends Method {
         logMethod.sendForm(test[6][0], test[6][1]);
 
         WebElement title = driver.findElement(By.xpath("//h1[contains(text(), 'BẢNG THỐNG KÊ')]"));
-        Assert.assertTrue(title.isDisplayed(), test[6][2]);
+        Assert.assertTrue(title.isDisplayed(), "Đăng nhập không thành công!");
     }
 
     @AfterMethod

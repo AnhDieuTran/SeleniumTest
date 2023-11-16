@@ -35,7 +35,7 @@ public class OrderMethod {
     public void clickWithJS(WebElement element) {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
-        method.waitTime(2000);
+        method.waitTime(1000);
     }
 
     // Hàm khi click chọn dòng sản phẩm trên navbar để trang tự động kéo đến các sản phẩm tương ứng.
@@ -50,7 +50,7 @@ public class OrderMethod {
         WebElement element = driver.findElement(By.xpath("//" + tag + "[text()='" + textProduct + "']"));
         int elementPosition = element.getLocation().getY();
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, arguments[0] - 200);", elementPosition);
-        //waitTime(2000);
+        method.waitTime(1000);
     }
 
     // Hàm cuộn thủ công kéo đến phần id tương ứng.
